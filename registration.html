@@ -2,13 +2,10 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Registro de agresiones ambientales en la provincia de
-	Ciudad Real</title>
+<title>Registro de lugares de interés ambiental, cultural, histórico y etnográfico de Campo de Criptana</title>
 <link rel='stylesheet' href='stylesheets/registration.css' />
-<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css'
-	rel='stylesheet' />
-<link rel='stylesheet'
-	href='http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css' />
+<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
+<link rel='stylesheet' href='http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css' />
 <link rel='stylesheet' href='javascripts/jquery.ptTimeSelect.css' />
 <script>
 	var submitted = false;
@@ -19,7 +16,7 @@
 	<div id='masthead'>
 		<div id='header' class='limiter'>
 			<h1>
-				Registro de agresiones ambientales en la provincia de Ciudad Real
+				Registro de lugares de interés ambiental, cultural, histórico y etnográfico de Campo de Criptana
 			</h1>
 		</div>
 	</div>
@@ -31,283 +28,200 @@
 			<div class='col col-50'>
 				<div id='contentform'>
 					<div id='form'>
-						<iframe name='hidden_iframe' id='hidden_iframe'
-							style='display: none;'
+						<iframe name='hidden_iframe' id='hidden_iframe'	style='display: none;'
 							onload='if(submitted) {window.location="confirm.html";}'>
 						</iframe>
 
-						<form method='post' target='hidden_iframe'
-							onsubmit='submitted=Valida(this);' class='well span6'
-							id='ss-form'>
-
-							<!-- 						<form -->
-							<!-- 							action="https://docs.google.com/spreadsheet/formResponse?formkey=dEtSRl9FYUFlVTQ0TVpKVkFkZnlCR3c6MQ&amp;theme=0AX42CRMsmRFbUy1iYTQxMmQyMy02N2Q1LTRmYjUtYmJiMS0yZGZlZTExMGVlZWU&amp;ifq" -->
-							<!-- 							method="POST" id="ss-form"> -->
-
-
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item ss-item-required ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_0">T&iacute;tulo
-											<span class="ss-required-asterisk">*</span>
-										</label> 
-										<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
-									</div>
+						<div class="ss-form-container">
+							<div class="ss-top-of-page">
+								<div class="ss-form-heading">
+									<div class="ss-form-desc ss-no-ignore-whitespace">Introduce
+										los datos y la ubicación del lugar de interés.</div>
+									<div class="ss-required-asterisk">* Campos obligatorios</div>
 								</div>
 							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item ss-item-required ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_2">Latitud <span
-											class="ss-required-asterisk">*</span></label> <label
-											class="ss-q-help" for="entry_2">Coordenadas decimales</label> <input type="text"
-											name="entry.2.single" value="" class="ss-q-short"
-											id="entry_2">
-									</div>
-								</div>
+							<div class="ss-form">
+								<form target='hidden_iframe' onsubmit='submitted=Valida(this);'	method="POST" id="ss-form" target="_self" onsubmit="">
+									<ol style="padding-left: 0">
+										<!-- Título -->
+										<div class="errorbox-good">
+											<div class="ss-item ss-item-required ss-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-title" for="entry_1016167564">
+														Título <span class="ss-required-asterisk">*</span>	
+													</label>
+													<input type="text" name="entry.1016167564" value="" class="ss-q-short" id="entry_1016167564">
+												</div>
+											</div>
+										</div>
+										<!-- Latitud -->
+										<div class="errorbox-good">
+											<div class="ss-item ss-item-required ss-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_1350527290">
+															Latitud <span class="ss-required-asterisk">*</span>
+													</label> 
+													<label class="ss-q-help" for="entry_1350527290">Coordenadas decimales</label>
+													<input type="text" name="entry.1350527290" value="" class="ss-q-short" id="entry_1350527290">
+												</div>
+											</div>
+										</div>
+										<!-- Longitud -->
+										<div class="errorbox-good">
+											<div class="ss-item ss-item-required ss-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_1394268219">
+														Longitud <span class="ss-required-asterisk">*</span>
+													</label> 
+													<label class="ss-q-help" for="entry_1394268219">Coordenadas decimales</label>
+													<input type="text" name="entry.1394268219" value="" class="ss-q-short" id="entry_1394268219">
+												</div>
+											</div>
+										</div>
+										<!-- Descripción breve -->
+										<div class="errorbox-good">
+											<div class="ss-item ss-item-required ss-paragraph-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_145325308">
+														Descripción breve <span	class="ss-required-asterisk">*</span>
+													</label>
+													<label class="ss-q-help" for="entry_145325308">Máximo 800 caracteres</label>
+													<textarea name="entry.145325308" rows="8" cols="75" class="ss-q-long" id="entry_145325308"></textarea>
+												</div>
+											</div>
+										</div>
+										<!-- Descripción completa -->
+										<div class="errorbox-good">
+											<div class="ss-item  ss-paragraph-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_367978289">
+														Descripción completa
+													</label>
+													<label class="ss-q-help" for="entry_367978289">Si es muy extensa, subir un documento e introducir aquí su enlace.</label>
+													<textarea name="entry.367978289" rows="20" cols="75" class="ss-q-long" id="entry_367978289"></textarea>
+												</div>
+											</div>
+										</div>
+										<!-- Tipo de valor -->
+										<div class="ss-form-question errorbox-good">
+											<div class="ss-item ss-item-required ss-checkbox">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_1054059460">
+															Tipo de valor <span	class="ss-required-asterisk">*</span>
+													</label>
+													<ul class="ss-choices ss-choices-required">
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="checkbox" name="entry.727857438" value="Ambiental" id="group_727857438_1"
+																	class="ss-q-checkbox">Ambiental
+															</label>
+														</li>
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="checkbox" name="entry.727857438" value="Cultural" id="group_727857438_2"
+																	class="ss-q-checkbox">Cultural
+															</label>
+														</li>
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="checkbox" name="entry.727857438" value="Histórico" id="group_727857438_3"
+																	class="ss-q-checkbox">Histórico
+															</label>
+														</li>
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="checkbox" name="entry.727857438" value="Etnográfico" id="group_727857438_4"
+																	class="ss-q-checkbox">Etnográfico
+															</label>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- Valor -->
+										<div class="errorbox-good">
+											<div class="ss-item  ss-radio">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_1141944576">
+														Valor
+													</label>
+													<ul class="ss-choices">
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="radio" name="entry.1957737003" value="Bajo"
+																	id="group_1957737003_1" class="ss-q-radio">
+																Bajo
+															</label>
+														</li>
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="radio" name="entry.1957737003" value="Medio"
+																	id="group_1957737003_2" class="ss-q-radio">
+																Medio
+															</label>
+														</li>
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="radio" name="entry.1957737003" value="Alto"
+																	id="group_1957737003_3" class="ss-q-radio">
+																Alto
+															</label>
+														</li>
+														<li class="ss-choice-item">
+															<label class="ss-choice-label">
+																<input type="radio" name="entry.1957737003" value="Muy alto"
+																	id="group_1957737003_1" class="ss-q-radio">
+																Muy alto
+															</label>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- Época -->
+										<div class="errorbox-good">
+											<div class="ss-item ss-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_1542401500">
+														Época
+													</label> 
+													<input type="text" name="entry.1542401500" value="" class="ss-q-short" id="entry_1542401500">
+												</div>
+											</div>
+										</div>
+										<!-- Fotos -->
+										<div class="errorbox-good">
+											<div class="ss-item  ss-paragraph-text">
+												<div class="ss-form-entry">
+													<label class="ss-q-item-label" for="entry_1108547699">
+														Fotos
+													</label>
+													<label class="ss-q-help" for="entry_1108547699">Introduce la dirección URL de las fotos (una por línea)</label>
+													<textarea name="entry.1108547699" rows="20" cols="75" class="ss-q-long" id="entry_1108547699"></textarea>
+												</div>
+											</div>
+										</div>
+					
+										<input type="hidden" name="draftResponse" value="[]">
+										<input type="hidden" name="pageHistory" value="0">
+										
+										<!-- Botonoes -->
+										<div class="ss-item ss-navigate">
+											<table id="navigation-table">
+												<tbody>
+													<tr>
+														<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+															<input type="submit" name="submit" value="Enviar" id="ss-submit">
+															<input type=button onClick="location.href='index.html'" value='Volver al mapa'>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</ol>
+								</form>
 							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item ss-item-required ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_10">Longitud <span
-											class="ss-required-asterisk">*</span></label> <label
-											class="ss-q-help" for="entry_10">Coordenadas decimales
-											</label> <input type="text"
-											name="entry.10.single" value="" class="ss-q-short"
-											id="entry_10">
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item ss-item-required ss-paragraph-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_3">Descripci&oacute;n
-											breve <span class="ss-required-asterisk">*</span>
-										</label> <label class="ss-q-help" for="entry_3">Max 800
-											caracteres.</label>
-										<textarea name="entry.3.single" rows="8" cols="75"
-											class="ss-q-long" id="entry_3"></textarea>
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-paragraph-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_13">Descripci&oacute;n
-											detallada </label> <label class="ss-q-help" for="entry_13">Si
-											es muy extensa, subir un documento e introducir aqu&iacute;
-											el enlace al documento. </label>
-										<textarea name="entry.13.single" rows="8" cols="75"
-											class="ss-q-long" id="entry_13"></textarea>
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_8">Fecha </label> <label
-											class="ss-q-help" for="entry_8">Introduce la fecha o
-											el periodo en que produjo el da&ntilde;o</label> <input type="text"
-											name="entry.8.single" value="" class="ss-q-short"
-											id="entry_8">
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_1">Lugar </label> <label
-											class="ss-q-help" for="entry_1">Lugar o paraje</label> <input
-											type="text" name="entry.1.single" value="" class="ss-q-short"
-											id="entry_1">
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_4">T&eacute;rmino
-											municipal </label> <label class="ss-q-help" for="entry_4"></label> <input
-											type="text" name="entry.4.single" value="" class="ss-q-short"
-											id="entry_4">
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-checkbox">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_9">Tipo </label> <label
-											class="ss-q-help" for="entry_9">Indica el medio que
-											se vio afectado por el da&ntilde;o.</label>
-										<ul class="ss-choices">
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Agua" class="ss-q-checkbox"
-													id="group_9_1"> Agua</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Aire" class="ss-q-checkbox"
-													id="group_9_2"> Aire</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Caminos p&uacute;blicos"
-													class="ss-q-checkbox" id="group_9_3"> Caminos
-													p&uacute;blicos</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Fauna" class="ss-q-checkbox"
-													id="group_9_4"> Fauna</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Flora" class="ss-q-checkbox"
-													id="group_9_5"> Flora</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Paisaje" class="ss-q-checkbox"
-													id="group_9_6"> Paisaje</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Patrimonio"
-													class="ss-q-checkbox" id="group_9_7"> Patrimonio</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Suelo" class="ss-q-checkbox"
-													id="group_9_8"> Suelo</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="checkbox"
-													name="entry.9.group" value="Otras" class="ss-q-checkbox"
-													id="group_9_9"> Otras</label></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-radio">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_11">Causa </label> <label
-											class="ss-q-help" for="entry_11">Indica la actividad
-											que caus&oacute; el da&ntilde;o.</label>
-										<ul class="ss-choices">
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Agricultura"
-													class="ss-q-radio" id="group_11_1"> Agricultura</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Caza" class="ss-q-radio"
-													id="group_11_2"> Caza</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Energ&iacute;a"
-													class="ss-q-radio" id="group_11_3"> Energ&iacute;a</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Ganader&iacute;a"
-													class="ss-q-radio" id="group_11_4">
-													Ganader&iacute;a</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Incendios" class="ss-q-radio"
-													id="group_11_5"> Incendios</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Industria" class="ss-q-radio"
-													id="group_11_6"> Industria</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Militar" class="ss-q-radio"
-													id="group_11_7"> Militar</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Miner&iacute;a"
-													class="ss-q-radio" id="group_11_8"> Miner&iacute;a</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Ocio y turismo"
-													class="ss-q-radio" id="group_11_9"> Ocio y turismo</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Pesca" class="ss-q-radio"
-													id="group_11_10"> Pesca</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Transporte" class="ss-q-radio"
-													id="group_11_11"> Transporte</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Urbanismo" class="ss-q-radio"
-													id="group_11_12"> Urbanismo</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.11.group" value="Otras" class="ss-q-radio"
-													id="group_11_13"> Otras</label></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-text">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_7">Fotos </label> <label
-											class="ss-q-help" for="entry_7">Si hay fotos, deben
-											subirse a Picassa e indicar las URLs de los enlaces a las
-											fotos. </label> <input type="text" name="entry.7.single" value=""
-											class="ss-q-short" id="entry_7">
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="errorbox-good">
-								<div class="ss-item  ss-radio">
-									<div class="ss-form-entry">
-										<label class="ss-q-title" for="entry_12">Gravedad </label> <label
-											class="ss-q-help" for="entry_12">Indica la gravedad
-											del da&ntilde;o.</label>
-										<ul class="ss-choices">
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.12.group" value="Baja" class="ss-q-radio"
-													id="group_12_1"> Baja</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.12.group" value="Media" class="ss-q-radio"
-													id="group_12_2"> Media</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.12.group" value="Alta" class="ss-q-radio"
-													id="group_12_3"> Alta</label></li>
-											<li class="ss-choice-item"><label
-												class="ss-choice-label"><input type="radio"
-													name="entry.12.group" value="Muy alta" class="ss-q-radio"
-													id="group_12_4"> Muy alta</label></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<br> <input type="hidden" name="pageNumber" value="0">
-							<input type="hidden" name="backupCache" value="">
-
-
-							<div class="ss-item ss-navigate">
-								<div class="ss-form-entry">
-									<input type="submit" name="submit" value="Enviar">
-									<input type=button onClick="location.href='index.html'" value='Volver al mapa' value='click here'">
-									<div class="password-warning">Nunca envíes contraseñas a
-										través de Formularios de Google.</div>
-								</div>
-							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -325,10 +239,9 @@
 	</div>
 
 	<script>
-		//script of form  from google
+		//script of form from google
 		(function() {
-			var divs = document.getElementById('ss-form').getElementsByTagName(
-					'div');
+			var divs = document.getElementById('ss-form').getElementsByTagName('div');
 			var numDivs = divs.length;
 			for ( var j = 0; j < numDivs; j++) {
 				if (divs[j].className == 'errorbox-bad') {
