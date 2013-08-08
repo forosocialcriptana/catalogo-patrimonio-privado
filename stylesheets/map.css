@@ -75,9 +75,11 @@ a {
   }
 
 #header h1 {
-  font-size:20px;
+  font-size:22px;
   line-height:40px;
-  margin-left:40px;
+  position:absolute;
+  bottom:40px;
+  left:200px;
   color:#3200bb;
   }
   #header h1 a {
@@ -124,10 +126,10 @@ a {
   padding:0 10px;
   }
 #masthead {
-  height:80px;
+  height:100px;
   }
 #header {
-  height:40px;
+  height:60px;
   width:100%;
   }
 .inner {

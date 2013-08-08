@@ -10,10 +10,11 @@
 <body>
 	<div id='masthead'>
 		<div id='header'>
+		<img alt="Logo foro social" src="img/rotulo-foro.png" style="float:left;">
+		<input type=button onClick="location.href='registration.html'" value='Registro de lugares' value='click here' style="float: right;">
 			<h1>
-				Mapa de lugares de interés ambiental, artístico, etnográfico e histórico de Campo de Criptana
-				<input type=button onClick="location.href='registration.html'" value='Registro de lugares' value='click here' style="float: right;">
-			</h1> 
+				Lugares de interés ambiental, artístico, etnográfico e histórico de Campo de Criptana
+			</h1>
 		</div>
 		<div class='limiter'>
 			<!-- block for menu by type incident -->
@@ -40,31 +41,30 @@
 	<!-- Section: Graph and Downloads -->
 	<div class='section'>
 	<h3>Estadísticas</h3>
-				Número total de lugares registrados: <span id='total' style='font-weight:bold;'>1</span>
+				Número total de lugares registrados: <span id='total' style='font-weight:bold;'></span>
 		<div class='limiter clearfix'>
 			<!-- Graph -->
 			<div id='block_statistic'>
 				<div id='types_chart'></div>
+				<div id='table'></div>
 			</div>
+			
 
-			<!-- Downloads -->
-			<!--        <div id='downloads' class='col col-50'>
-          <a id='download_csv' title='Descarga de Datos' class='button'>Descargar CSV Datos</a>
-          <p>Descargue el documento .csv que contiene todos los datos visibles en este sitio para su uso en un programa de hoja de cálculo o <a href='http://mapbox.com/tilemill'>TileMill</a>.</p>
-
-          <a id='download_josn' title='API Feed' class='button'>Datos JSON Feed</a>
-          <p>Accede a  los datos visualizados en formato  JSON API para el uso en programación  de una aplicación web.</p>
-        </div>-->
-
+			<!-- Descarga de datos en abierto -->
+			<div id='downloads' class='col col-50'>
+          		<a id='download_csv' title='Descarga de Datos' class='button'>Descargar CSV Datos</a>
+          		<p>Descargue el documento .csv que contiene todos los datos visibles en este sitio para su uso en un programa de hoja de cálculo o <a href='http://mapbox.com/tilemill'>TileMill</a>.</p>
+          		<a id='download_josn' title='API Feed' class='button'>Datos JSON Feed</a>
+          		<p>Accede a  los datos visualizados en formato  JSON API para el uso en programación de una aplicación web.</p>
+        	</div>
 		</div>
 	</div>
 
 	<!-- Section: Footer -->
 	<div id='footer'>
 		<div class='limiter'>
-			<a href='#opendata'>Datos Abiertos</a> | <a href='#howto'>Como
-				desarrollar</a> | Desarrollado con <a href='http://mapbox.com/'
-				class='icon mapbox'>MapBox</a>
+			<a href='#opendata'>Datos Abiertos</a> | <a href='#howto'>Como desarrollar</a> | 
+			Desarrollado con <a href='http://mapbox.com/'>MapBox</a>
 		</div>
 	</div>
 
@@ -74,13 +74,12 @@
 	<div id='opendata' class='popover'>
 		<h2>Datos Abiertos</h2>
 		<p>Mediante la presente aplicación el Foro Social de Campo de Criptana
-			publica como datos abiertos los principales lugares de interés ambiental, culturala, histórico y etnogŕafico de Campo de Criptana.</p>
+			publica como datos abiertos los principales lugares de interés ambiental, artístico, etnogŕafico e histórico de Campo de Criptana.</p>
 	</div>
 
 	<div id='howto' class='popover'>
 		<h2>Como Desarrollar</h2>
-		<p>
-			Para el almacenamiento de datos se ha utilizado Google spreadsheet
+		<p>Para el almacenamiento de datos se ha utilizado Google spreadsheet
 			API, que permite acceder a una hoja de cálculo pública e importar los
 			datos en formato json. Seguidamente estos datos son recuperados
 			mediante una <a
@@ -94,7 +93,7 @@
 		<p>
 			Se puede encontrar más información en: <a
 				href='http://developmentseed.org/blog/2012/sept/13/mapping-dynamic-data-google-spreadsheet/'>
-				Mapping Dynamic Data Directly from a Google Spreadsheet</a> <a
+				Mapping Dynamic Data Directly from a Google Spreadsheet</a> y <a
 				href='http://mapbox.com/blog/2012-09-05-mapping-crowdsourced-locations-google-docs/'>
 				Mapping Crowdsourced Locations with MapBox and Google Docs</a>
 		</p>

@@ -37,13 +37,14 @@ map.on('click',function(e){
 // Construye el mapa
 function mapData(f) {
     map.markerLayer.setGeoJSON(f);
+    download_data();
 }
 
 //Carga de librerías para gráficos
-google.load('visualization', '1.0', {packages:['corechart']}); 
+google.load('visualization', '1.0', {packages:['corechart','table']}); 
 //Carga de datos
 function drawGraph() {
-   var query = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0ApyGMNeKDyLddHlESWR1MGxUaUgtOUlKbm1KUUtoTEE&gid=4&range=A1:B10&pub=1');
+   var query = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0ApyGMNeKDyLddHlESWR1MGxUaUgtOUlKbm1KUUtoTEE&gid=2&pub=1');
   query.send(handleQueryResponse);
 }
 
@@ -53,14 +54,22 @@ function handleQueryResponse(response) {
 	  return;
 	  }
 	  var data = response.getDataTable();
+	  // Total de lugares registrados
+	  document.getElementById('total').innerHTML=data.getValue(0,2);
+	  var view = new google.visualization.DataView(data);
+	  view.setColumns([0, 1]);
+	  // Vista de tabla
+	  //var table = new google.visualization.Table(document.getElementById('table'));
+	  //table.draw(view, {width: 400});
 	  var chart = new google.visualization.PieChart(document.getElementById('types_chart'));
-	  chart.draw(data, {
+	  chart.draw(view, {
 	    title: 'Distribución de lugares por tipo de valor',
 	    backgroundColor: 'transparent',
 	    height: 400
 	  });
 	}
 google.setOnLoadCallback(drawGraph);
+
 
 
 // Función para publicar los datos abiertos
@@ -106,29 +115,5 @@ $(document).ready(function () {
         $('#backdrop').fadeOut(200);
         $('#opendata, #howto, #close').hide();
         return false;
-    });
-
-    $('#arrow_block_inf').click(function (e) {
-        $('.block_inf_type').css('display', 'block');
-        $('#close_block_inf').show();
-
-        // close other block static
-        $('.statistic_by_month').css('display', 'none');
-        $('#close_block_stac').css('display', 'none');
-        return false;
-    });
-
-    $('#close_block_inf').click(function (e) {
-        $('.zoomer').show();
-        $('.block_inf_type').hide();
-        $('#close_block_inf').hide();
-        return false;
-    });
-
-    // get the click fro close block statistic line
-    $('#close_block_stac').click(function () {
-        $(this).hide();
-        $('.statistic_by_month').css('display','none');
-        $('#arrow_show_block').css('display','block');
     });
 });
