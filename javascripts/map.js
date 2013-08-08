@@ -1,4 +1,4 @@
-var data_id = '0ApyGMNeKDyLddE4wS2NqY01QSjFqWXRHaXdFMzRnTWc',
+var data_id = '0ApyGMNeKDyLddHlESWR1MGxUaUgtOUlKbm1KUUtoTEE',
     map_id = 'forosocialcriptana.map-ns0xydjk',
     features,
     features_summary,
@@ -6,20 +6,20 @@ var data_id = '0ApyGMNeKDyLddE4wS2NqY01QSjFqWXRHaXdFMzRnTWc',
 
 mmg_google_docs_spreadsheet_1(data_id, mapData);
 map.setView([39.396805714385486,-3.0959129333496094],12);
-// Add fullscreen
+// Añade pantalla completa al mapa
 var fullscreenControl = new L.Control.Fullscreen();
 fullscreenControl.addTo(map);
-// Add map leyend
+// Leyenda del mapa
 map.legendControl.addLegend(document.getElementById('legend-content').innerHTML);
 L.tileLayer('Foro Social de Campo de Criptana', {
     attribution: '<a href="http://www.forosocialcriptana.com">Foro Social de Campo de Criptana</a>'
 }).addTo(map);
 
 // add a marker in the given location, attach some popup content to it and open the popup
-//L.marker([38.870721,-3.99353]).addTo(map).bindPopup('Aeropuerto de Ciudad Real');
+// L.marker([39.396805714385486,-3.12576]).addTo(map).bindPopup('Iglesia');
 
 
-//Listen for individual marker clicks
+// Nota que aparece al hacer click sobre las marcas del mapa
 map.markerLayer.on('click',function(e) {
 	var feature = e.layer.feature;
 	e.layer.bindPopup('<h3>' + feature.properties.título + 
@@ -29,40 +29,25 @@ map.markerLayer.on('click',function(e) {
 	document.getElementById('info').innerHTML = info;
 });
 
-// Clear the tooltip when map is clicked
+// Cierra las notas de las marcas cuando se hace click sobre el mapa
 map.on('click',function(e){
 	document.getElementById('info').innerHTML = '';
 });
 
-// Build map
+// Construye el mapa
 function mapData(f) {
     map.markerLayer.setGeoJSON(f);
 }
 
-//CARGA DE LIBRERÍAS PARA GRÁFICOS
+//Carga de librerías para gráficos
 google.load('visualization', '1.0', {packages:['corechart']}); 
-//CARGA DE DATOS
+//Carga de datos
 function drawGraph() {
-  var query1 = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0Aj7zn-PTgttkdEtSRl9FYUFlVTQ0TVpKVkFkZnlCR3c&gid=2&range=A1:B14&pub=1');
-  var query2 = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0Aj7zn-PTgttkdEtSRl9FYUFlVTQ0TVpKVkFkZnlCR3c&gid=4&range=A1:B10&pub=1');
-  query1.send(handleQueryResponse1);
-  query2.send(handleQueryResponse2);
+   var query = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0ApyGMNeKDyLddHlESWR1MGxUaUgtOUlKbm1KUUtoTEE&gid=4&range=A1:B10&pub=1');
+  query.send(handleQueryResponse);
 }
-function handleQueryResponse1(response) {
-  if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-  return;
-  }
-  var data = response.getDataTable();
-  var chart = new google.visualization.PieChart(document.getElementById('causes_chart'));
-  chart.draw(data, {
-    title: 'Distribución de agresiones por Causa',
-    backgroundColor: 'transparent',
-    height: 400
-  });
-  document.getElementById('total').innerHTML=data.getValue(1,2);
-}
-function handleQueryResponse2(response) {
+
+function handleQueryResponse(response) {
 	  if (response.isError()) {
 	    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
 	  return;
@@ -70,7 +55,7 @@ function handleQueryResponse2(response) {
 	  var data = response.getDataTable();
 	  var chart = new google.visualization.PieChart(document.getElementById('types_chart'));
 	  chart.draw(data, {
-	    title: 'Distribución de agresiones por Tipo',
+	    title: 'Distribución de lugares por tipo de valor',
 	    backgroundColor: 'transparent',
 	    height: 400
 	  });
@@ -78,19 +63,17 @@ function handleQueryResponse2(response) {
 google.setOnLoadCallback(drawGraph);
 
 
-// function for put href for download data
+// Función para publicar los datos abiertos
 function download_data() {
     $('#download_csv').attr('href', 'https://docs.google.com/a/developmentseed.org/spreadsheet/pub?key=' + data_id + '&output=csv');
     $('#download_josn').attr('href', 'https://spreadsheets.google.com/feeds/list/' + data_id + '/od6/public/values?alt=json-in-script');
 }
 
-//Filters
+//Filtros
 $(document).ready(function () {
-    var $typesMenu = $('#types');
-    // get event click on menu types
+    var $typesMenu = $('#tipos');
     $typesMenu.find('a').click(function (e) {
         var id_types = e.target.id;
-        // check if is active on menu types "Todos"
         if (id_types === 'Todos') {
             $typesMenu.find('a').removeClass('active');
             $('#' + id_types).addClass('active');
