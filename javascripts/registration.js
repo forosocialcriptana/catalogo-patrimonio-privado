@@ -121,7 +121,7 @@ $(function () {
                 lat: l.lat,
                 lon: l.lon
             }).zoom(m.zoom()).optimal();
-            entry_1350527290
+
             return mark;
         });
 

@@ -40,9 +40,9 @@ function mapData(f) {
     download_data();
 }
 
-//Carga de librerías para gráficos
+// Carga de librerías para gráficos
 google.load('visualization', '1.0', {packages:['corechart','table']}); 
-//Carga de datos
+// Carga de datos
 function drawGraph() {
    var query = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0ApyGMNeKDyLddHlESWR1MGxUaUgtOUlKbm1KUUtoTEE&gid=2&pub=1');
   query.send(handleQueryResponse);
@@ -69,7 +69,6 @@ function handleQueryResponse(response) {
 	  });
 	}
 google.setOnLoadCallback(drawGraph);
-
 
 
 // Función para publicar los datos abiertos

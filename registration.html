@@ -2,10 +2,13 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Registro de lugares de interés ambiental, artístico, etnográfico e histórico de Campo de Criptana</title>
+<title>Registro de lugares de interés ambiental, artístico,
+	etnográfico e histórico de Campo de Criptana</title>
 <link rel='stylesheet' href='stylesheets/registration.css' />
-<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
-<link rel='stylesheet' href='http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css' />
+<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css'
+	rel='stylesheet' />
+<link rel='stylesheet'
+	href='http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css' />
 <link rel='stylesheet' href='javascripts/jquery.ptTimeSelect.css' />
 <script>
 	var submitted = false;
@@ -15,9 +18,8 @@
 
 	<div id='masthead'>
 		<div id='header' class='limiter'>
-			<h1>
-				Registro de lugares de interés ambiental, cultural, histórico y etnográfico de Campo de Criptana
-			</h1>
+			<h1>Registro de lugares de interés ambiental, cultural,
+				histórico y etnográfico de Campo de Criptana</h1>
 		</div>
 	</div>
 
@@ -28,7 +30,8 @@
 			<div class='col col-50'>
 				<div id='contentform'>
 					<div id='form'>
-						<iframe name='hidden_iframe' id='hidden_iframe'	style='display: none;'
+						<iframe name='hidden_iframe' id='hidden_iframe'
+							style='display: none;'
 							onload='if(submitted) {window.location="confirm.html";}'>
 						</iframe>
 
@@ -41,16 +44,17 @@
 								</div>
 							</div>
 							<div class="ss-form">
-								<form target='hidden_iframe' onsubmit='submitted=Valida(this);'	method="POST" id="ss-form" target="_self" onsubmit="">
+								<form target='hidden_iframe' onsubmit='submitted=Valida(this);'
+									method="POST" id="ss-form">
 									<ol style="padding-left: 0">
 										<!-- Título -->
 										<div class="errorbox-good">
 											<div class="ss-item ss-item-required ss-text">
 												<div class="ss-form-entry">
 													<label class="ss-q-title" for="entry_1016167564">
-														Título <span class="ss-required-asterisk">*</span>	
-													</label>
-													<input type="text" name="entry.1016167564" value="" class="ss-q-short" id="entry_1016167564">
+														Título <span class="ss-required-asterisk">*</span>
+													</label> <input type="text" name="entry.1016167564" value=""
+														class="ss-q-short" id="entry_1016167564">
 												</div>
 											</div>
 										</div>
@@ -59,10 +63,10 @@
 											<div class="ss-item ss-item-required ss-text">
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_1350527290">
-															Latitud <span class="ss-required-asterisk">*</span>
-													</label> 
-													<label class="ss-q-help" for="entry_1350527290">Coordenadas decimales</label>
-													<input type="text" name="entry.1350527290" value="" class="ss-q-short" id="entry_1350527290">
+														Latitud <span class="ss-required-asterisk">*</span>
+													</label> <label class="ss-q-help" for="entry_1350527290">Coordenadas
+														decimales</label> <input type="text" name="entry.1350527290"
+														value="" class="ss-q-short" id="entry_1350527290">
 												</div>
 											</div>
 										</div>
@@ -72,9 +76,9 @@
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_1394268219">
 														Longitud <span class="ss-required-asterisk">*</span>
-													</label> 
-													<label class="ss-q-help" for="entry_1394268219">Coordenadas decimales</label>
-													<input type="text" name="entry.1394268219" value="" class="ss-q-short" id="entry_1394268219">
+													</label> <label class="ss-q-help" for="entry_1394268219">Coordenadas
+														decimales</label> <input type="text" name="entry.1394268219"
+														value="" class="ss-q-short" id="entry_1394268219">
 												</div>
 											</div>
 										</div>
@@ -83,10 +87,11 @@
 											<div class="ss-item ss-item-required ss-paragraph-text">
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_145325308">
-														Descripción breve <span	class="ss-required-asterisk">*</span>
-													</label>
-													<label class="ss-q-help" for="entry_145325308">Máximo 800 caracteres</label>
-													<textarea name="entry.145325308" rows="8" cols="75" class="ss-q-long" id="entry_145325308"></textarea>
+														Descripción breve <span class="ss-required-asterisk">*</span>
+													</label> <label class="ss-q-help" for="entry_145325308">Máximo
+														800 caracteres</label>
+													<textarea name="entry.145325308" rows="8" cols="75"
+														class="ss-q-long" id="entry_145325308"></textarea>
 												</div>
 											</div>
 										</div>
@@ -95,10 +100,11 @@
 											<div class="ss-item  ss-paragraph-text">
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_367978289">
-														Descripción completa
-													</label>
-													<label class="ss-q-help" for="entry_367978289">Si es muy extensa, subir un documento e introducir aquí su enlace.</label>
-													<textarea name="entry.367978289" rows="20" cols="75" class="ss-q-long" id="entry_367978289"></textarea>
+														Descripción completa </label> <label class="ss-q-help"
+														for="entry_367978289">Si es muy extensa, subir un
+														documento e introducir aquí su enlace.</label>
+													<textarea name="entry.367978289" rows="20" cols="75"
+														class="ss-q-long" id="entry_367978289"></textarea>
 												</div>
 											</div>
 										</div>
@@ -107,38 +113,34 @@
 											<div class="ss-item ss-item-required ss-checkbox">
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_1054059460">
-															Tipo de valor <span	class="ss-required-asterisk">*</span>
+														Tipo de valor <span class="ss-required-asterisk">*</span>
 													</label>
 													<ul class="ss-choices ss-choices-required">
-														<li class="ss-choice-item">
-															<label class="ss-choice-label">
-																<input type="checkbox" name="entry.727857438" value="Ambiental" id="group_727857438_1"
-																	class="ss-q-checkbox">Ambiental
-															</label>
-														</li>
-														<li class="ss-choice-item">
-															<label class="ss-choice-label">
-																<input type="checkbox" name="entry.727857438" value="Artístico" id="group_727857438_2"
-																	class="ss-q-checkbox">Artístico
-															</label>
-														</li>
-														<li class="ss-choice-item">
-															<label class="ss-choice-label">
-																<input type="checkbox" name="entry.727857438" value="Etnográfico" id="group_727857438_3"
-																	class="ss-q-checkbox">Etnográfico
-															</label>
-														</li>
-														<li class="ss-choice-item">
-															<label class="ss-choice-label">
-																<input type="checkbox" name="entry.727857438" value="Histórico" id="group_727857438_4"
-																	class="ss-q-checkbox">Histórico
-															</label>
-														</li>
+														<li class="ss-choice-item"><label
+															class="ss-choice-label"> <input type="checkbox"
+																name="entry.727857438" value="Ambiental"
+																id="group_727857438_1" class="ss-q-checkbox">Ambiental
+														</label></li>
+														<li class="ss-choice-item"><label
+															class="ss-choice-label"> <input type="checkbox"
+																name="entry.727857438" value="Artístico"
+																id="group_727857438_2" class="ss-q-checkbox">Artístico
+														</label></li>
+														<li class="ss-choice-item"><label
+															class="ss-choice-label"> <input type="checkbox"
+																name="entry.727857438" value="Etnográfico"
+																id="group_727857438_3" class="ss-q-checkbox">Etnográfico
+														</label></li>
+														<li class="ss-choice-item"><label
+															class="ss-choice-label"> <input type="checkbox"
+																name="entry.727857438" value="Histórico"
+																id="group_727857438_4" class="ss-q-checkbox">Histórico
+														</label></li>
 													</ul>
 												</div>
 											</div>
 										</div>
-<!-- 										Valor
+										<!-- 										Valor
 										<div class="errorbox-good">
 											<div class="ss-item  ss-radio">
 												<div class="ss-form-entry">
@@ -178,14 +180,14 @@
 												</div>
 											</div>
 										</div>
- -->										<!-- Época -->
+ -->
+										<!-- Época -->
 										<div class="errorbox-good">
 											<div class="ss-item ss-text">
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_1542401500">
-														Época
-													</label> 
-													<input type="text" name="entry.1542401500" value="" class="ss-q-short" id="entry_1542401500">
+														Época </label> <input type="text" name="entry.1542401500" value=""
+														class="ss-q-short" id="entry_1542401500">
 												</div>
 											</div>
 										</div>
@@ -194,26 +196,27 @@
 											<div class="ss-item  ss-paragraph-text">
 												<div class="ss-form-entry">
 													<label class="ss-q-item-label" for="entry_1108547699">
-														Fotos
-													</label>
-													<label class="ss-q-help" for="entry_1108547699">Introduce la dirección URL de las fotos (una por línea)</label>
-													<textarea name="entry.1108547699" rows="20" cols="75" class="ss-q-long" id="entry_1108547699"></textarea>
+														Fotos </label> <label class="ss-q-help" for="entry_1108547699">Introduce
+														la dirección URL de las fotos (una por línea)</label>
+													<textarea name="entry.1108547699" rows="20" cols="75"
+														class="ss-q-long" id="entry_1108547699"></textarea>
 												</div>
 											</div>
 										</div>
-					
+
 										<input type="hidden" name="draftResponse" value="[]">
 										<input type="hidden" name="pageHistory" value="0">
-										
+
 										<!-- Botonoes -->
 										<div class="ss-item ss-navigate">
 											<table id="navigation-table">
 												<tbody>
 													<tr>
-														<td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-															<input type="submit" name="submit" value="Enviar" id="ss-submit">
-															<input type=button onClick="location.href='index.html'" value='Volver al mapa'>
-														</td>
+														<td class="ss-form-entry goog-inline-block"
+															id="navigation-buttons" dir="ltr"><input
+															type="submit" name="submit" value="Enviar" id="ss-submit">
+															<input type=button onClick="location.href='index.html'"
+															value='Volver al mapa'></td>
 													</tr>
 												</tbody>
 											</table>
@@ -228,8 +231,9 @@
 
 			<!-- Element: Map -->
 			<div class='col col-50'>
-				Si conoces las coordenadas (latitud y longitud) del daño, indícalas en los campos del formulario. <br> 
-				Si no las conoces, determina su ubicación en el mapa lo más precisamente que puedas. 
+				Si conoces las coordenadas (latitud y longitud) del daño, indícalas
+				en los campos del formulario. <br> Si no las conoces, determina
+				su ubicación en el mapa lo más precisamente que puedas.
 				<div id='map'></div>
 				<div class='left'>
 					<a id='geojsonLayer' href='#'></a>
@@ -241,15 +245,16 @@
 	<script>
 		//script of form from google
 		(function() {
-			var divs = document.getElementById('ss-form').getElementsByTagName('div');
+			var divs = document.getElementById('ss-form').getElementsByTagName(
+					'div');
 			var numDivs = divs.length;
-			for ( var j = 0; j < numDivs; j++) {
+			for (var j = 0; j < numDivs; j++) {
 				if (divs[j].className == 'errorbox-bad') {
 					divs[j].lastChild.firstChild.lastChild.focus();
 					return;
 				}
 			}
-			for ( var i = 0; i < numDivs; i++) {
+			for (var i = 0; i < numDivs; i++) {
 				var div = divs[i];
 				if (div.className == 'ss-form-entry' && div.firstChild
 						&& div.firstChild.className == 'ss-q-title') {
