@@ -20,9 +20,9 @@ function Valida(formulario){
     } else if ($("#entry_145325308").val().length>800) {
         alert("El número máximo de caracteres para la descripción breve es de 800. Puedes utilizar la descripción completa para escribir más.");
         return false;
-    } else if (!($("#group_727857438_1").attr("checked") || $("#group_727857438_2").attr("checked") || $("#group_727857438_3").attr("checked") || $("#group_727857438_4").attr("checked"))) {
-        alert("Indique el tipo de valor");
-        return false;
+    // } else if (!($("#group_727857438_1").attr("checked") || $("#group_727857438_2").attr("checked") || $("#group_727857438_3").attr("checked") || $("#group_727857438_4").attr("checked"))) {
+    //     alert("Indique el tipo de valor");
+    //     return false;
     } else {
         return true;
     }
